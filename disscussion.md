@@ -82,6 +82,13 @@ Serialization from python objects to JSON, XML, or other transmission formats is
       <td><a href="http://kim.readthedocs.io/en/latest/user/quickstart.html#marshaling-data">Yes</a></td>
       <td><a href="http://kim.readthedocs.io/en/latest/user/quickstart.html#handling-validation-errors">Yes</a></td>
     </tr>
+    <tr>
+      <td><a href="https://gitlab.com/sgrignard/serpyco/">Serpyco</a></td>
+      <td><a href="https://sgrignard.gitlab.io/serpyco/docs/getting_started.html">Yes</a></td>
+      <td><a href="https://sgrignard.gitlab.io/serpyco/docs/getting_started.html#custom-field-encoder">Yes</a></td>
+      <td><a href="https://sgrignard.gitlab.io/serpyco/docs/getting_started.html#serialize-dataclasses-instances">Yes</a></td>
+      <td><a href="https://sgrignard.gitlab.io/serpyco/docs/getting_started.html#validate-data">Yes</a></td>
+    </tr>
   </tbody>
 </table>
 
