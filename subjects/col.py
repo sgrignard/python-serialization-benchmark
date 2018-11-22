@@ -1,7 +1,7 @@
 import colander
 from colander import null
 
-__name__ = 'Colander'
+name = "Colander"
 
 
 class ObjectType(colander.Mapping):
@@ -32,7 +32,7 @@ class ObjectSchema(colander.SchemaNode):
             self.instance = appstruct
             for subnode in self.children:
                 if isinstance(subnode, MethodSchema):
-                    setattr(subnode, 'instance', appstruct)
+                    setattr(subnode, "instance", appstruct)
         return super(ObjectSchema, self).serialize(appstruct)
 
     def deserialize(self, cstruct):

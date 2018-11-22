@@ -1,19 +1,19 @@
 import strainer
 
-__name__ = 'Strainer'
+name = "Strainer"
 
 sub_strainer_serializer = strainer.serializer(
-  strainer.field('w'),
-  strainer.field('x', attr_getter=lambda obj: obj.x + 10),
-  strainer.field('y'),
-  strainer.field('z'),
+    strainer.field("w"),
+    strainer.field("x", attr_getter=lambda obj: obj.x + 10),
+    strainer.field("y"),
+    strainer.field("z"),
 )
 
 complex_strainer_serializer = strainer.serializer(
-  strainer.field('foo'),
-  strainer.field('bar', attr_getter=lambda obj: obj.bar()),
-  strainer.child('sub', serializer=sub_strainer_serializer),
-  strainer.many('subs', serializer=sub_strainer_serializer),
+    strainer.field("foo"),
+    strainer.field("bar", attr_getter=lambda obj: obj.bar()),
+    strainer.child("sub", serializer=sub_strainer_serializer),
+    strainer.many("subs", serializer=sub_strainer_serializer),
 )
 
 

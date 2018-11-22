@@ -1,11 +1,11 @@
 import marshmallow
 
-__name__ = 'Marshmallow'
+name = "Marshmallow"
 
 
 class SubM(marshmallow.Schema):
     w = marshmallow.fields.Int()
-    x = marshmallow.fields.Method('get_x')
+    x = marshmallow.fields.Method("get_x")
     y = marshmallow.fields.Str()
     z = marshmallow.fields.Int()
 

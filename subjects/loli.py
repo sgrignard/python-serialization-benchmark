@@ -1,29 +1,35 @@
 from collections import namedtuple
 from lollipop.types import Object, String, Integer, List, FunctionField, MethodField
 
-__name__ = 'Lollipop'
+name = "Lollipop"
 
-SubS = namedtuple('SubS', ['w', 'x', 'y', 'z'])
-ComplexS = namedtuple('ComplexS', ['foo', 'bar', 'sub', 'subs'])
+SubS = namedtuple("SubS", ["w", "x", "y", "z"])
+ComplexS = namedtuple("ComplexS", ["foo", "bar", "sub", "subs"])
 
 
 def get_x(obj):
     return obj.x + 10
 
 
-SubSType = Object({
-    'w': Integer(),
-    'x': FunctionField(Integer(), get_x),
-    'y': String(),
-    'z': Integer(),
-}, constructor=SubS)
+SubSType = Object(
+    {
+        "w": Integer(),
+        "x": FunctionField(Integer(), get_x),
+        "y": String(),
+        "z": Integer(),
+    },
+    constructor=SubS,
+)
 
-ComplexSType = Object({
-    'foo': String(),
-    'bar': MethodField(Integer(), 'bar'),
-    'sub': SubSType,
-    'subs': List(SubSType),
-}, constructor=ComplexS)
+ComplexSType = Object(
+    {
+        "foo": String(),
+        "bar": MethodField(Integer(), "bar"),
+        "sub": SubSType,
+        "subs": List(SubSType),
+    },
+    constructor=ComplexS,
+)
 
 
 def serialization_func(obj, many):

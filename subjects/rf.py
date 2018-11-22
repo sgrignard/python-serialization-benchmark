@@ -1,12 +1,14 @@
 from django.conf import settings
+
 settings.configure()
 
 import django
+
 django.setup()
 
 from rest_framework import serializers as rf_serializers
 
-__name__ = 'Django REST Framework'
+name = "Django REST Framework"
 
 
 class SubRF(rf_serializers.Serializer):
